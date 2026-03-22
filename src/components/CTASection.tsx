@@ -2,28 +2,23 @@ import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const CTASection = () => (
-  <section id="cta" className="py-24 md:py-32">
+  <section id="cta" className="py-24 md:py-32 bg-navy text-navy-foreground">
     <div className="container">
       <ScrollReveal>
-        <div className="relative rounded-3xl gradient-bg px-8 py-16 md:py-20 text-center overflow-hidden">
-          {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 blur-2xl -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white/10 blur-2xl translate-y-1/2 -translate-x-1/2" />
-
-          <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
-              Ready to Grow Your Brand?
-            </h2>
-            <p className="text-white/80 text-lg mb-8" style={{ textWrap: "pretty" }}>
-              Let's build something amazing together.
-            </p>
-            <Button
-              size="xl"
-              className="bg-white text-foreground font-bold hover:bg-white/90 shadow-soft hover:shadow-hover active:scale-[0.97]"
-            >
-              Book a Free Consultation
-            </Button>
-          </div>
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-6">Ready?</p>
+          <h2 className="font-display text-4xl md:text-6xl tracking-tight mb-4">
+            Ready to <em className="text-primary not-italic">Accelerate</em>?
+          </h2>
+          <p className="text-white/60 text-lg mb-8" style={{ textWrap: "pretty" }}>
+            Let's build something amazing together. Book a free strategy call and discover how ZORIX can transform your brand.
+          </p>
+          <Button
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
+          >
+            Start Your Project
+          </Button>
         </div>
       </ScrollReveal>
     </div>
