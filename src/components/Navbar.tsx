@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#home" className="flex items-center">
-          <img src={zorixLogo} alt="ZORIX – Next-Gen Solutions" className="h-9 md:h-11 w-auto" />
+          <img src={zorixLogo} alt="ZORIX – Next-Gen Solutions" className="h-14 md:h-16 w-auto" />
         </a>
 
         {/* Desktop */}
