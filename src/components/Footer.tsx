@@ -13,8 +13,8 @@ const Footer = () => (
     <div className="container">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <span className="text-lg font-black tracking-tight text-foreground">ZORIX</span>
-          <p className="text-sm text-muted-foreground mt-1">Next-Gen Digital Solutions</p>
+          <img src={zorixLogo} alt="ZORIX – Next-Gen Solutions" className="h-9 w-auto" />
+        </div>
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-2">
