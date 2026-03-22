@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,40 +7,37 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 30% 12%;
+    --foreground: 220 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 12%;
+    --card-foreground: 220 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 12%;
+    --popover-foreground: 220 25% 10%;
 
-    --primary: 254 85% 62%;
+    --primary: 220 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 60% 97%;
-    --secondary-foreground: 220 30% 12%;
+    --secondary: 220 10% 96%;
+    --secondary-foreground: 220 25% 10%;
 
-    --muted: 220 20% 96%;
+    --muted: 220 10% 95%;
     --muted-foreground: 220 10% 46%;
 
-    --accent: 193 100% 50%;
+    --accent: 220 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 92%;
-    --input: 220 20% 92%;
-    --ring: 254 85% 62%;
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 220 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --navy: 220 40% 13%;
+    --navy: 220 40% 8%;
     --navy-foreground: 0 0% 100%;
-
-    --gradient-purple: 254 85% 62%;
-    --gradient-blue: 193 100% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -66,28 +63,19 @@
 }
 
 @layer utilities {
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)));
+  .font-display {
+    font-family: 'DM Serif Display', Georgia, serif;
   }
-  .gradient-bg {
-    background-image: linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)));
+  .text-accent-blue {
+    color: hsl(var(--primary));
   }
-  .gradient-bg-subtle {
-    background-image: linear-gradient(135deg, hsl(var(--gradient-purple) / 0.05), hsl(var(--gradient-blue) / 0.08));
-  }
-  .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40;
-    box-shadow: 0 8px 32px hsl(var(--gradient-purple) / 0.06);
-  }
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-lg border border-white/50 rounded-2xl;
-    box-shadow: 0 4px 24px hsl(var(--gradient-purple) / 0.05), 0 1px 3px hsl(220 20% 12% / 0.04);
+  .bg-navy {
+    background-color: hsl(var(--navy));
   }
   .shadow-soft {
     box-shadow: 0 4px 24px hsl(220 20% 12% / 0.06), 0 1px 3px hsl(220 20% 12% / 0.04);
   }
   .shadow-hover {
-    box-shadow: 0 12px 40px hsl(var(--gradient-purple) / 0.12), 0 4px 12px hsl(220 20% 12% / 0.06);
+    box-shadow: 0 12px 40px hsl(220 20% 12% / 0.12), 0 4px 12px hsl(220 20% 12% / 0.06);
   }
 }

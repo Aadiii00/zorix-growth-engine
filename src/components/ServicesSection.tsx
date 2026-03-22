@@ -15,19 +15,29 @@ const services = [
 const ServicesSection = () => (
   <section id="services" className="py-24 md:py-32">
     <div className="container">
-      <ScrollReveal className="text-center mb-16">
+      <ScrollReveal className="mb-16">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">What We Do</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Our Services</h2>
+        <h2 className="font-display text-4xl md:text-5xl tracking-tight">Core Services</h2>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* Horizontal scrollable tabs */}
+      <ScrollReveal delay={80} className="flex flex-wrap gap-3 mb-12 border-b border-border pb-6">
+        {["Digital", "Strategy", "Creative", "SEO", "Analytics", "E-Commerce"].map((tab) => (
+          <span
+            key={tab}
+            className="px-4 py-2 text-sm font-medium text-muted-foreground border border-border rounded-sm hover:bg-foreground hover:text-background transition-colors duration-200 cursor-pointer"
+          >
+            {tab}
+          </span>
+        ))}
+      </ScrollReveal>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
         {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 80}>
-            <div className="group glass-card p-6 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
-              <div className="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
-                <s.icon className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="font-bold text-base mb-2">{s.title}</h3>
+          <ScrollReveal key={s.title} delay={i * 60}>
+            <div className="group bg-background p-6 h-full transition-colors duration-300 hover:bg-secondary cursor-pointer">
+              <s.icon className="w-5 h-5 text-primary mb-4" strokeWidth={1.5} />
+              <h3 className="font-bold text-sm mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </div>
           </ScrollReveal>

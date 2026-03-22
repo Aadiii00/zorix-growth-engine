@@ -11,19 +11,21 @@ const points = [
 const WhyChooseUsSection = () => (
   <section className="py-24 md:py-32">
     <div className="container">
-      <ScrollReveal className="text-center mb-16">
+      <ScrollReveal className="mb-16">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Why ZORIX</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Why Choose Us</h2>
+        <h2 className="font-display text-4xl md:text-5xl tracking-tight">Why Choose Us</h2>
       </ScrollReveal>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {points.map((p, i) => (
-          <ScrollReveal key={p.title} delay={i * 100} className="text-center">
-            <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-5 shadow-soft">
-              <p.icon className="w-6 h-6 text-white" />
+          <ScrollReveal key={p.title} delay={i * 80}>
+            <div className="group">
+              <div className="w-12 h-12 bg-primary flex items-center justify-center mb-5">
+                <p.icon className="w-5 h-5 text-primary-foreground" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-bold text-base mb-2">{p.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
             </div>
-            <h3 className="font-bold text-lg mb-2">{p.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
           </ScrollReveal>
         ))}
       </div>

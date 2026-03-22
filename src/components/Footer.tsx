@@ -1,27 +1,21 @@
-import zorixLogo from "@/assets/zorix-logo.png";
-
 const links = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Work", href: "#portfolio" },
   { label: "Contact", href: "#cta" },
 ];
 
 const Footer = () => (
-  <footer className="border-t border-border bg-muted/30 py-12">
+  <footer className="border-t border-border py-12">
     <div className="container">
-      <div className="grid md:grid-cols-3 gap-8 items-start">
-        {/* Brand */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <img src={zorixLogo} alt="ZORIX" className="h-8 mb-3" />
-          <p className="text-sm text-muted-foreground max-w-xs">
-            Performance-driven digital marketing for brands that refuse to settle.
-          </p>
+          <span className="text-lg font-black tracking-tight text-foreground">ZORIX</span>
+          <p className="text-sm text-muted-foreground mt-1">Next-Gen Digital Solutions</p>
         </div>
 
-        {/* Links */}
-        <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-center">
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {l.label}
@@ -29,22 +23,16 @@ const Footer = () => (
           ))}
         </div>
 
-        {/* Contact */}
-        <div className="md:text-right">
-          <p className="text-sm font-semibold mb-1">Get in touch</p>
-          <p className="text-sm text-muted-foreground">hello@zorix.agency</p>
-          <div className="flex gap-3 mt-3 md:justify-end">
-            {/* Simple social icons as text links */}
-            {["Twitter", "LinkedIn", "Instagram"].map((s) => (
-              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors font-medium">
-                {s}
-              </a>
-            ))}
-          </div>
+        <div className="flex gap-4">
+          {["Twitter", "LinkedIn", "Instagram"].map((s) => (
+            <a key={s} href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-medium uppercase tracking-wide">
+              {s}
+            </a>
+          ))}
         </div>
       </div>
 
-      <div className="border-t border-border mt-8 pt-6 text-center">
+      <div className="border-t border-border mt-8 pt-6">
         <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} ZORIX. All rights reserved.</p>
       </div>
     </div>
