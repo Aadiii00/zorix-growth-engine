@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
   { label: "About", href: "/#about" },
-  { label: "Our Work", href: "/portfolio" },
+  { label: "Our Work", href: "/#portfolio" },
 ];
 
 const Navbar = () => {
@@ -14,48 +14,48 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm">
-      <div className="container flex items-center justify-between h-16 md:h-20">
+      <div className="container flex items-center justify-between h-14 sm:h-16 md:h-20 px-4 sm:px-6">
         <a href="#home" className="flex items-center gap-2 z-50 transition-opacity hover:opacity-80">
-          <img src={zorixLogo} alt="ZORIX Logo" className="h-14 md:h-16 w-auto mix-blend-multiply" />
+          <img src={zorixLogo} alt="ZORIX Logo" className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mix-blend-multiply" />
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-sm lg:text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {l.label}
             </a>
           ))}
-          <Button size="default" asChild>
+          <Button size="default" asChild className="text-sm lg:text-base px-4 lg:px-6">
             <a href="#about">Book Now</a>
           </Button>
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden p-2" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors" onClick={() => setOpen(!open)}>
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-t border-border animate-fade-up">
-          <div className="container py-4 flex flex-col gap-3">
+          <div className="container py-4 flex flex-col gap-2 px-4 sm:px-6">
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground py-2"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground py-3 px-4 rounded-lg hover:bg-accent transition-colors"
               >
                 {l.label}
               </a>
             ))}
-            <Button size="default" className="w-full mt-2" asChild>
+            <Button size="default" className="w-full mt-4 text-sm" asChild>
               <a href="#about">Book Now</a>
             </Button>
           </div>

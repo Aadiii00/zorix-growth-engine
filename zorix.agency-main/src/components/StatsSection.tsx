@@ -21,7 +21,9 @@ const StatsSection = () => (
           The Numbers Speak <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">For Themselves</span>
         </h2>
         <Button size="lg" className="rounded-full shadow-[0_4px_14px_0_rgba(var(--primary),0.39)] hover:shadow-[0_6px_20px_rgba(var(--primary),0.23)] transition-all" asChild>
-          <a href="#portfolio">See Case Studies</a>
+          <a href="/portfolio" className="text-primary hover:text-primary/80 font-medium flex items-center gap-2 transition-colors">
+            View All Work <span className="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </a>
         </Button>
       </ScrollReveal>
 
